@@ -1,5 +1,5 @@
 const { prompt } = require("inquirer");
-const { generate, Card } = require("./templater");
+const { generate, Card, writeFile } = require("./templater");
 const { Manager, Intern, Engineer } = require("./Employee");
 
 const defaultQs = [
@@ -67,7 +67,9 @@ const run = async () => {
     ]);
 
     team.push(
-        role === 'intern' ? new 
+      role === "intern"
+        ? new Intern(memeber.name, memeber.id, member.email, member.school)
+        : new Engineer(member.name, member.id, member.email, member.github)
     );
 
     adding = (
@@ -79,7 +81,9 @@ const run = async () => {
 
   const cards = (await Promise.all(team.map(m => Card(m)))).join("");
 
-  console.log(await generate({ manager_name: manager.name, cards }));
+  const n = await generate({ manager_name: manager.name, cards });
+
+  await writeFile("./output/out.html", n, "UTF-8");
 };
 
 run();

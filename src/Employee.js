@@ -6,10 +6,21 @@ class Employee {
     this.role = role;
   }
 
-  getName = () => this.name;
-  getId = () => this.id;
-  getEmail = () => this.email;
-  getRole = () => this.role;
+  getName() {
+    return this.name;
+  }
+
+  getId() {
+    return this.id;
+  }
+
+  getEmail() {
+    return this.email;
+  }
+
+  getRole() {
+    return this.role;
+  }
 }
 
 class Manager extends Employee {
@@ -25,7 +36,9 @@ class Engineer extends Employee {
     this.github = github;
   }
 
-  getGithub = () => this.github;
+  getGithub() {
+    return this.github;
+  }
 }
 
 class Intern extends Employee {
@@ -34,7 +47,9 @@ class Intern extends Employee {
     this.school = school;
   }
 
-  getSchool = () => this.school;
+  getSchool() {
+    return this.school;
+  }
 }
 
 module.exports = { Employee, Manager, Engineer, Intern };
