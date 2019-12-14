@@ -3,7 +3,7 @@ class Employee {
     this.name = name;
     this.id = id;
     this.email = email;
-    this.role = role;
+    this.role = role ? role : "Employee";
   }
 
   getName() {
@@ -27,6 +27,10 @@ class Manager extends Employee {
   constructor(name, id, email, officeNumber) {
     super(name, id, email, "Manager");
     this.officeNumber = officeNumber;
+  }
+
+  getOfficeNumber() {
+    return this.officeNumber;
   }
 }
 
