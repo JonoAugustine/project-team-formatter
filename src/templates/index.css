@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 100%;
+  padding: 30px 0;
+  text-align: center;
+  color: #fffff1;
+  background-color: green;
+}
+
+header h1 {
+  margin: 0 auto;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+}
+
+@media (min-width: 768px) {
+  main {
+    max-width: 80%;
+  }
+}
+
+.card {
+  min-width: 200px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 10px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.card a {
+  color: black;
+  text-decoration: underline;
+}
+
+.card a:visited {
+  color: purple;
+}
+
+.card:hover {
+  -webkit-box-shadow: 4px 8px 10px 0px rgba(50, 50, 50, 0.2);
+          box-shadow: 4px 8px 10px 0px rgba(50, 50, 50, 0.2);
+}
+
+.card .card-header {
+  padding: 10px;
+  text-align: left;
+  color: white;
+  background-color: #096fb3;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card .card-body {
+  padding: 20px;
+  background-color: #ececec;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.card .card-body ul {
+  border-radius: 10%;
+  list-style: none;
+  background-color: #fffffe;
+}
+
+.card .card-body ul li {
+  border-bottom: 1px solid lightblue;
+  padding: 10px;
+}
+
+.card .card-body ul li:last-child {
+  border: none;
+}
+/*# sourceMappingURL=index.css.map */

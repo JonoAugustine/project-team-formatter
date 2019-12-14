@@ -1,0 +1,23 @@
+{
+  "name": "project-team-formatter",
+  "version": "1.0.0",
+  "description": "A simple CLI HTML generator for team profiles",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest ./spec/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonoAugustine/project-team-formatter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JonoAugustine/project-team-formatter/issues"
+  },
+  "homepage": "https://github.com/JonoAugustine/project-team-formatter#readme",
+  "dependencies": {
+    "inquirer": "^7.0.0",
+    "jest": "^24.9.0"
+  }
+}
