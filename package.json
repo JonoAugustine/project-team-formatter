@@ -4,7 +4,8 @@
   "description": "A simple CLI HTML generator for team profiles",
   "main": "index.js",
   "scripts": {
-    "test": "jest ./spec/"
+    "test": "jest ./spec/",
+    "start": "node ./src/index.js"
   },
   "repository": {
     "type": "git",
