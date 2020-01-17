@@ -68,7 +68,7 @@ const run = async () => {
 
     team.push(
       role === "intern"
-        ? new Intern(memeber.name, memeber.id, member.email, member.school)
+        ? new Intern(member.name, member.id, member.email, member.school)
         : new Engineer(member.name, member.id, member.email, member.github)
     );
 
@@ -86,4 +86,8 @@ const run = async () => {
   await writeFile("./output/out.html", n, "UTF-8");
 };
 
-run();
+try {
+  run();
+} catch (error) {
+  console.log(error.message);
+}
